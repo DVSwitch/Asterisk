@@ -1,0 +1,19 @@
+[ard0]
+
+input_device = null		; ALSA input channel, not used
+output_device = plughw:0,0	; ALSA output channel
+serial_device = /dev/null	; Serial port for control
+serial_disable = 1		; No serial port on PRi anyway
+
+; General config options, with default values shown.
+; You should use one section per device, with [general] being used
+; for the device.
+
+[general]
+
+debug = 1			; misc debug flags, default is 0
+carrierfrom = no		; no,serialdsr,serialdsrinvert
+ctcssfrom=serialcts		; serialctsinvert
+
+rxondelay=4
+
