@@ -1,9 +1,11 @@
 [ard0]
 
-input_device = null		; ALSA input channel, not used
+input_device = plughw:0,0		; ALSA input channel
+; input_device = ameter 		; ALSA input channel
 output_device = plughw:0,0	; ALSA output channel
-serial_device = /dev/null	; Serial port for control
-serial_disable = 1		; No serial port on PRi anyway
+; output_device = ameter	  ; ALSA output channel
+serial_device = /dev/ttyS0	; Serial port for control
+serial_disable = 1
 
 ; General config options, with default values shown.
 ; You should use one section per device, with [general] being used
@@ -11,9 +13,15 @@ serial_disable = 1		; No serial port on PRi anyway
 
 [general]
 
-debug = 1			; misc debug flags, default is 0
-carrierfrom = no		; no,serialdsr,serialdsrinvert
-ctcssfrom=serialcts		; serialctsinvert
+debug = 1			          ; misc debug flags, default is 0
+; rxboost = 0		      	; no rx gain boost
+; rxctcssrelax = 1	   	; reduce talkoff from radios w/o CTCSS Tx HPF
+; rxctcssfreq = 100.0		; rx ctcss freq in floating point. must be in table
+; txctcssfreq = 100.0		; tx ctcss freq, any frequency permitted
 
-rxondelay=4
+carrierfrom = serialdsrinvert	; no,serialdsr,serialdsrinvert
+ctcssfrom = no			; no,serialcts,serialctsinvert
 
+; invertptt = 0
+
+rxondelay = 4
