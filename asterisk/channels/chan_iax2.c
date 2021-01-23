@@ -7687,7 +7687,7 @@ static int registry_rerequest(struct iax_ies *ies, int callno, struct sockaddr_i
 	char challenge[256] = "";
 	int res;
 	int authmethods = 0;
-	if (option_verbose > 4) ast_log(LOG_WARNING,"REGISTER-LOG: registry rereqquest\n");
+	if (option_verbose > 5) ast_log(LOG_WARNING,"REGISTER-LOG: registry rereqquest\n");
 	if (ies->authmethods)
 		authmethods = ies->authmethods;
 	if (ies->username)
