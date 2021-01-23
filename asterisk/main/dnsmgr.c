@@ -232,7 +232,7 @@ static int refresh_list(const void *data)
 		return -1;
 	}
 
-	if (option_verbose > 2)
+	if (option_verbose > 5)
 		ast_verbose(VERBOSE_PREFIX_2 "Refreshing DNS lookups.\n");
 	AST_LIST_LOCK(info->entries);
 	AST_LIST_TRAVERSE(info->entries, entry, list) {
