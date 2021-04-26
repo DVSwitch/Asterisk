@@ -7,13 +7,13 @@ buflen = 220			; specifies the receiver buffer length in milliseconds.
 				; Buffer length may be specified on a perstanza and per-client basis
 				; http://ohnosec.org/drupal/node/195.
 
-password = secret_password	; password common to all clients
+password = BLAH			; password common to all clients (default = BLAH)
 utos = y			; Turn on IP TOS for Ubiquiti
 
-[1998]			
-Main = secret,transmit		; master,transmit,adpcm,nulaw,nodeemp,buflen=value,gpsid[=value]
+[1999]			
+Main = radios,transmit		; master,transmit,adpcm,nulaw,nodeemp,buflen=value,gpsid[=value]
 				; master - this client is the Master Timing source
-				; secret - password unique to this client
+				; secret - password unique to this client (default = radios)
 				; (the RTCM client that is on the same LAN as the Asterisk server.)
 				; There can only be 1 Master Timing source  per entire Asterisk server.
 				; transmit - this client is intended to have transmit audio sent to it and will have a transmitter connected to it.
