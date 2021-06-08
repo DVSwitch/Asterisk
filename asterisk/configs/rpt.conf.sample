@@ -45,7 +45,9 @@ erxgain = -3				; Echolink receive gain adjustment
 					; Note: Gain is in db-volts (20logVI/VO)
 etxgain = 3				; Echolink transmit gain adjustment
 					; Note: Gain is in db-volts (20logVI/VO)
-;eannmode = 1                           ; 1 = Say only node number on echolink connects (default = 1)
+					
+;eannmode = 1				; 0 = No Echolink Announcements (need to verify)
+					; 1 = Say only node number on echolink connects (default = 1)
                                         ; 2 = say phonetic call sign only on echolink connects
                                         ; 3 = say phonetic call sign and node number on echolink connects
 
