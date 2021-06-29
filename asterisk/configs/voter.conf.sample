@@ -22,7 +22,18 @@ Main = radios,transmit		; master,transmit,adpcm,nulaw,nodeemp,buflen=value,gpsid
 				; nodeemp - this client is not to perform de-emphasis of the receiver audio  (This is only to be used with non-voting clients.)
 				; buflen=value - buffer length for this client only.
 				; gpsid[=value] - This specifies a gps identity to associate with the specified client (as referred in the /etc/asterisk/gps.conf file).
+				
 plfilter = y			; DSP high pass filter
+
+                                ; On the TX side, the RTCM/VOTER expects the repeater to accept mic audio.
+                                ; In other words, the repeater is providing the pre-emphasis, not the RTCM/VOTER (you are not directly modulating the TX).
+                                ; This can be overridden by setting CTCSS tone in voter.conf. If a CTCSS tone is defined, the RTCM will provide pre-emphasis to the audio,
+                                ; and expects that you will be connecting to your repeater's flat audio input (direct modulation).
+
+                                ; If you don’t want TX CTCSS tone but do need pre-emphasis, set an arbitrary (any) CTCSS tone in voter.conf, and set the level to 0.
+                                ; This will force the RTCM/VOTER to pre-emphasize the audio it generates on the TX pin, but it won't actually mix in a CTCSS tone.
+
+
 txctcss = 100.0			; Transmit CTCSS frequency
 txctcsslevel = 20		; Transmit CTCSS level
 txtoctype = phase		; Transmit tone control type: none,phase,notone
