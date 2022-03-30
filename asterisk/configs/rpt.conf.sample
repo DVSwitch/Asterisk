@@ -120,6 +120,8 @@ telemdefault = 1                        ; 0 = telemetry output off
 
 telemdynamic = 1                        ; 0 = disallow users to change the local telemetry setting with a COP command,
                                         ; 1 = Allow users to change the setting with a COP command. (default = 1)
+					
+;notelemtx = yes			; telemetry output does not make main system transmit (optional)
 
 telemnomdb = 0                          ; Set the default telemetry level. (default = 0)
 telemduckdb = -9                        ; Reduct telemetry level when ducking (default = -9)
