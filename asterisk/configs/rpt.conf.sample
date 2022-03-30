@@ -64,7 +64,7 @@ scheduler = schedule			; scheduler stanza
 functions = functions			; Repeater Function stanza
 phone_functions = functions		; (optional) Phone Function stanza for 'P' mode
 dphone_functions = functions		; (optional) Dumb phone function stanza for 'D' mode
-link_functions = functions		; Link Function stanza
+link_functions = functions		; Link Function stanza for links
 
 telemetry = telemetry			; Telemetry stanza
 morse = morse				; Morse stanza
