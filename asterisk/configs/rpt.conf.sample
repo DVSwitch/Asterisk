@@ -32,6 +32,13 @@ duplex = 1                              ; 0 = Half duplex with no telemetry tone
                                         ;     This mode is preferred when interfacing a repeater.
                                         ; 3 = Full Duplex with telemetry tones and hang time, but no repeated audio.
                                         ; 4 = Full Duplex with telemetry tones and hang time. Repeated audio only when the autopatch is down.
+					
+;propagate_dtmf	= yes			; DTMF sent to system from link gets
+					; repeated onto main system output (optional)
+
+;propagate_phonedtmf = yes		; DTMF sent to system from phone gets
+					; repeated into main system output and
+					; link outputs (optional)							
 
 linktolink = no				; disables forcing physical half-duplex operation of main repeater while
 					; still keeping half-duplex semantics (optional)
