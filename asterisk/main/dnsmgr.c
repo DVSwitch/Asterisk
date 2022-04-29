@@ -175,7 +175,7 @@ static int dnsmgr_refresh(struct ast_dnsmgr_entry *entry, int verbose)
 		if (tmp.s_addr != entry->last.s_addr) {
 			ast_copy_string(iabuf, ast_inet_ntoa(entry->last), sizeof(iabuf));
 			ast_copy_string(iabuf2, ast_inet_ntoa(tmp), sizeof(iabuf2));
-			ast_log(LOG_NOTICE, "host '%s' changed from %s to %s\n", 
+			ast_log(LOG_DEBUG, "host '%s' changed from %s to %s\n", 
 				entry->name, iabuf, iabuf2);
 			memcpy(entry->result, hp->h_addr, sizeof(entry->result));
 			memcpy(&entry->last, hp->h_addr, sizeof(entry->last));
