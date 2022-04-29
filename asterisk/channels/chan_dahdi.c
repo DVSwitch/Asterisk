@@ -745,7 +745,7 @@ static const struct ast_channel_tech *chan_tech;
 #define GET_CHANNEL(p) ((p)->channel)
 #endif
 
-struct dahdi_pvt *round_robin[32];
+struct dahdi_pvt *round_robin[64];
 
 #ifdef HAVE_PRI
 static inline int pri_grab(struct dahdi_pvt *pvt, struct dahdi_pri *pri)
