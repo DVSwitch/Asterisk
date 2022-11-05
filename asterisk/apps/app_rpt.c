@@ -782,7 +782,7 @@ LOCAL_USER_DECL;
 #define	TOTIME 180000
 #define	IDTIME 300000
 #define	MAXRPTS 500
-#define MAX_STAT_LINKS 32
+#define MAX_STAT_LINKS 128 /* This needs to be looked at. 
 #define POLITEID 30000
 #define FUNCTDELAY 1500
 
