@@ -40,7 +40,7 @@
  * the changes to how the pbx module passes calls off to applications has changed as well,
  * which causes app_rpt to fail without a modification of the base Asterisk code in these
  * later versions.
- * --------------------------------------
+ * ---------------------- Test ----------------
  */
 /*! \file
  *
